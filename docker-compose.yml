@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: pg_goapi
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=go_api      
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./migration/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql
+  pgadmin-compose:
+    container_name: pgadmin4_goapi
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "root"
+    ports:
+      - "54321:80"
+    depends_on:
+      - postgres
