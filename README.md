@@ -43,3 +43,4 @@ $ docker inspect id_container | grep IPAddres
 # Day 20/100: using GORM
 - GORM installagion
 - connection to DB / change controllers to show from DB
+- new endpoints to Create, Delete, or Edit a personality
