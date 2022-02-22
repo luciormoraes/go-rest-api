@@ -4,6 +4,10 @@
 ```bash
 $ go get -u github.com/gorilla/mux
 ```
+- github.com/gorilla/handlers
+```bash
+$ go get github.com/gorilla/handlers
+```
 - GORM:
 ```bash
 $ go get -u gorm.io/gorm
@@ -44,3 +48,8 @@ $ docker inspect id_container | grep IPAddres
 - GORM installagion
 - connection to DB / change controllers to show from DB
 - new endpoints to Create, Delete, or Edit a personality
+
+# Day 22/100: Middleware and Front-End integration
+- adding a Header using a middleware: "Content-type", "application/json"
+- configuring CORS using 'go get github.com/gorilla/handlers'
+- connecting to a react app
